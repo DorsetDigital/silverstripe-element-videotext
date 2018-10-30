@@ -1,9 +1,9 @@
 {
- "name": "dorsetdigital/silverstripe-element-iframe",
- "description": "Adds an elemental content block to embed an iframe",
+ "name": "dorsetdigital/silverstripe-element-imagetext",
+ "description": "Adds an elemental content block with an image",
  "type": "silverstripe-vendormodule",
- "homepage": "https://github.com/DorsetDigital/silverstripe-element-iframe",
- "keywords": ["silverstripe", "iframe", "elemental", "module"],
+ "homepage": "https://github.com/DorsetDigital/silverstripe-element-imagetext",
+ "keywords": ["silverstripe", "elemental", "module"],
  "authors": [
   {
    "name": "Tim Burt",
