@@ -40,7 +40,7 @@ class ImageTextElement extends BaseElement
             ->setFolderName('pageimages')
             ->setAllowedMaxFileNumber(1),
             DropdownField::create('ImagePosition')
-            ->setSource(['after' => 'After Content', 'before' => 'Before Content']),
+            ->setSource([ 'after' => 'After Content', 'before' => 'Before Content' ]),
             TextField::create('ImageAlt')->setTitle('Alt text for the image'),
             DropdownField::create('ImageWidth')
             ->setSource([
