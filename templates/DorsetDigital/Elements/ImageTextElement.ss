@@ -1,4 +1,5 @@
 <div class="content-element<% if $Style %>$CssStyle<% end_if %>">
+    <% if $ShowTitle %>
     <div class="content-element__row">
         <% if $ShowTitle %>
             <div class="content-element__column">
@@ -6,6 +7,7 @@
             </div>
         <% end_if %>
     </div>
+    <% end_if %>
     <div class="content-element__row">
         <% if $ImagePosition == 'before' %>
             <% include ImageBlock %>
