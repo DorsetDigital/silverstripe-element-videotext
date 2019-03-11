@@ -29,6 +29,7 @@ class ImageTextElement extends BaseElement
     private static $owns = [
         'Image'
     ];
+    private static $inline_editable = false;
 
     public function getCMSFields()
     {
