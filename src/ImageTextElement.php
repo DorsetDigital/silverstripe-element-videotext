@@ -31,26 +31,29 @@ class ImageTextElement extends BaseElement
     ];
     private static $inline_editable = false;
 
+    private static $sizes = [
+        'half' => '1/2 page width',
+        'third' => '1/3 page width',
+        'quarter' => '1/4 page width',
+        'sixth' => '1/6 page width'
+    ];
+
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
         $fields->addFieldsToTab('Root.Main', [
             HTMLEditorField::create('Content'),
             UploadField::create('Image')
-            ->setAllowedFileCategories('image/supported')
-            ->setFolderName('pageimages')
-            ->setAllowedMaxFileNumber(1),
+                ->setAllowedFileCategories('image/supported')
+                ->setFolderName('pageimages')
+                ->setAllowedMaxFileNumber(1),
             DropdownField::create('ImagePosition')
-            ->setSource([ 'after' => 'After Content', 'before' => 'Before Content' ]),
+                ->setSource([ 'after' => 'After Content', 'before' => 'Before Content' ]),
             TextField::create('ImageAlt')->setTitle('Alt text for the image'),
             DropdownField::create('ImageWidth')
-            ->setSource([
-                'half' => '1/2 page width',
-                'third' => '1/3 page width',
-                'quarter' => '1/4 page width',
-                'sixth' => '1/6 page width'
-            ])
-            ->setDescription('Relative image size on larger screens.  On smaller screens the image will flow before or after the text content, instead of sitting next to it.')
+                ->setSource($this->config()->get('sizes'))
+                ->setDescription('Relative image size on larger screens.  On smaller screens the image will flow before or after the text content, instead of sitting next to it.')
         ]);
         return $fields;
     }
