@@ -48,7 +48,7 @@ class VideoTextElement extends BaseElement
                 ->setSource(['after' => 'After Content', 'before' => 'Before Content']),
             DropdownField::create('VideoWidth')
                 ->setSource($this->config()->get('sizes'))
-                ->setDescription('Relative image size on larger screens.  On smaller screens the video will flow before or after the text content, instead of sitting next to it.')
+                ->setDescription('Relative size on larger screens.  On smaller screens the video will flow before or after the text content, instead of sitting next to it.')
         ]);
         return $fields;
     }
