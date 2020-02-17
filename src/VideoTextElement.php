@@ -14,10 +14,10 @@ use SilverStripe\ORM\FieldType\DBField;
 class VideoTextElement extends BaseElement
 {
 
-    private static $singular_name = 'Text & Image Block';
-    private static $plural_name = 'Text & Image Blocks';
-    private static $description = 'Adds a block of text with accompanying image';
-    private static $table_name = 'DorsetDigital_Elements_ImageText';
+    private static $singular_name = 'Text & Video Block';
+    private static $plural_name = 'Text & Video Blocks';
+    private static $description = 'Adds a block of text with accompanying video';
+    private static $table_name = 'DorsetDigital_Elements_VideoText';
     private static $db = [
         'Content' => 'HTMLText',
         'VideoPosition' => 'Varchar(10)',
