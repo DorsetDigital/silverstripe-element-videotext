@@ -21,7 +21,7 @@ class VideoTextElement extends BaseElement
     private static $db = [
         'Content' => 'HTMLText',
         'VideoPosition' => 'Varchar(10)',
-        'ImageWidth' => 'Varchar(10)',
+        'VideoWidth' => 'Varchar(10)',
         'VideoEmbed' => 'Text'
     ];
 
