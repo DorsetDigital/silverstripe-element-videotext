@@ -11,13 +11,10 @@ Adds an elemental content block with a video
 
 # Usage
 This module adds a simple way to add a content block with a video embed
-By default, the module doesn't add any styling, it expects you to do this in your own CSS file
+By default, the module uses Bootstrap 4 CSS classes for styling.
+The CSS class assigned to the various video widths can be configured using a YML config file:
 
-A snippet of SCSS is included in the docs, designed to work with Bootstrap 4, which provides some basic layout for the element.
-
-The CSS class assigned to the various image widths can be configured using a YML config file:
-
-eg, for Bootstrap 4, you may want to use:
+eg:
 
 ```
 DorsetDigital\Elements\VideoTextElement:

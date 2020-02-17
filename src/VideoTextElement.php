@@ -32,10 +32,10 @@ class VideoTextElement extends BaseElement
     ];
 
     private static $sizes = [
-        'half' => '1/2 page width',
-        'third' => '1/3 page width',
-        'quarter' => '1/4 page width',
-        'sixth' => '1/6 page width'
+        'col-md-6' => '1/2 page width',
+        'col-md-4' => '1/3 page width',
+        'col-md-3' => '1/4 page width',
+        'col-md-2' => '1/6 page width'
     ];
 
 
