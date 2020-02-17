@@ -9,12 +9,12 @@
     </div>
     <% end_if %>
     <div class="content-element__row">
-        <% if $ImagePosition == 'before' %>
-            <% include ImageBlock %>
+        <% if $VideoPosition == 'before' %>
+            <% include VideoBlock %>
             <% include ContentBlock %>
         <% else %>
             <% include ContentBlock %>
-            <% include ImageBlock %>
+            <% include VideoBlock %>
         <% end_if %>
     </div>
 </div>

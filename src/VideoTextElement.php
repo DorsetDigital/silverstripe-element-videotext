@@ -1,4 +1,5 @@
 <?php
+
 namespace DorsetDigital\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
@@ -10,7 +11,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\FieldType\DBField;
 
 
-class ImageTextElement extends BaseElement
+class VideoTextElement extends BaseElement
 {
 
     private static $singular_name = 'Text & Image Block';
@@ -19,17 +20,16 @@ class ImageTextElement extends BaseElement
     private static $table_name = 'DorsetDigital_Elements_ImageText';
     private static $db = [
         'Content' => 'HTMLText',
-        'ImagePosition' => 'Varchar(10)',
-        'ImageAlt' => 'Varchar(255)',
-        'ImageWidth' => 'Varchar(10)'
+        'VideoPosition' => 'Varchar(10)',
+        'ImageWidth' => 'Varchar(10)',
+        'VideoEmbed' => 'Text'
     ];
-    private static $many_many = [
-        'Image' => Image::class
-    ];
-    private static $owns = [
-        'Image'
-    ];
+
     private static $inline_editable = false;
+
+    private static $casting = [
+        "VideoEmbed" => 'HTMLText',
+    ];
 
     private static $sizes = [
         'half' => '1/2 page width',
@@ -44,23 +44,18 @@ class ImageTextElement extends BaseElement
         $fields = parent::getCMSFields();
         $fields->addFieldsToTab('Root.Main', [
             HTMLEditorField::create('Content'),
-            UploadField::create('Image')
-                ->setAllowedFileCategories('image/supported')
-                ->setFolderName('pageimages')
-                ->setAllowedMaxFileNumber(1),
-            DropdownField::create('ImagePosition')
-                ->setSource([ 'after' => 'After Content', 'before' => 'Before Content' ]),
-            TextField::create('ImageAlt')->setTitle('Alt text for the image'),
-            DropdownField::create('ImageWidth')
+            DropdownField::create('VideoPosition')
+                ->setSource(['after' => 'After Content', 'before' => 'Before Content']),
+            DropdownField::create('VideoWidth')
                 ->setSource($this->config()->get('sizes'))
-                ->setDescription('Relative image size on larger screens.  On smaller screens the image will flow before or after the text content, instead of sitting next to it.')
+                ->setDescription('Relative image size on larger screens.  On smaller screens the video will flow before or after the text content, instead of sitting next to it.')
         ]);
         return $fields;
     }
 
     public function getType()
     {
-        return 'Image & Text';
+        return 'Video & Text';
     }
 
 

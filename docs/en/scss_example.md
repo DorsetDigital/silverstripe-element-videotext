@@ -5,7 +5,7 @@ Below is a sample of SCSS, designed to work with Bootstrap 4, which provides som
 
 
 ```scss
-.element.dorsetdigital__elements__imagetextelement {
+.element.dorsetdigital__elements__videotextelement {
   .content-element__row {
     @extend .row;
 

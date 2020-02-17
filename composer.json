@@ -1,8 +1,8 @@
 {
- "name": "dorsetdigital/silverstripe-element-imagetext",
- "description": "Adds an elemental content block with an image",
+ "name": "dorsetdigital/silverstripe-element-videotext",
+ "description": "Adds an elemental content block with a video embed",
  "type": "silverstripe-vendormodule",
- "homepage": "https://github.com/DorsetDigital/silverstripe-element-imagetext",
+ "homepage": "https://github.com/DorsetDigital/silverstripe-element-videotext",
  "keywords": ["silverstripe", "elemental", "module"],
  "authors": [
   {
