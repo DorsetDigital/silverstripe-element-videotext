@@ -20,7 +20,7 @@ The CSS class assigned to the various image widths can be configured using a YML
 eg, for Bootstrap 4, you may want to use:
 
 ```
-DorsetDigital\Elements\ImageTextElement:
+DorsetDigital\Elements\VideoTextElement:
   sizes:
     'col-md-6': '1/2 page width'
     'col-md-4': '1/3 page width'
